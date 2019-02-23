@@ -12,21 +12,30 @@ import { Component } from 'react';
 import {Platform, StyleSheet, Text, View, TouchableOpacity, } from 'react-native';
 import Counter from './src/container/CounterContainer';
 import CounterStore from './src/store/couter';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import { StackActions, NavigationActions, createStackNavigator, createAppContainer, StackNavigator } from 'react-navigation';
+import CounterContainer from './src/container/CounterContainer';
 
 export interface Props {
-
+  
 }
+/**
+ * TODO: stack navigator
+ */
+const Stack = createStackNavigator({
+  Home: { screen: CounterContainer }
+},
+  {initialRouteName : "Home"}
+);
+/**
+ * Appcontainer for createStackNavigator
+ */
+const AppContainer = createAppContainer(Stack);
+
 export default class App extends Component<Props> {
   render() {
+    console.log("navigation ", StackActions);
     return (
-      <Counter store={new CounterStore()}/>
+        <AppContainer />
     );
   }
 }

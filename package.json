@@ -16,7 +16,8 @@
     "react-native": "0.58.5",
     "react-native-iphone-x-helper": "^1.2.0",
     "react-native-size-matters": "^0.1.6",
-    "react-native-store": "^0.4.1"
+    "react-native-store": "^0.4.1",
+    "react-navigation": "^3.3.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.6",

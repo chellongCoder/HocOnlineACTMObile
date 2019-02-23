@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { StyleSheet, Text, View, TouchableHighlight } from "react-native";
-import { observer } from "mobx-react/native";
+import { observer, inject } from "mobx-react/native";
 import CounterStore from "../store/couter";
 
 const styles = StyleSheet.create({
@@ -18,31 +18,32 @@ const styles = StyleSheet.create({
 });
 
 export interface Props {
-    store : CounterStore;
+  couterStore : CounterStore;
 }
+@inject("couterStore")
 @observer
-export default class Counter extends Component<Props> {
+export default class CounterContainer extends Component<Props> {
   increment = () => {
-    this.props.store.increment();
+    this.props.couterStore.increment();
   };
 
   decrement = () => {
-    this.props.store.decrement();
+    this.props.couterStore.decrement();
   };
 
   incrementIfOdd = () => {
-    this.props.store.incrementIfOdd();
+    this.props.couterStore.incrementIfOdd();
   };
 
   incrementAsync = () => {
-    this.props.store.incrementAsync();
+    this.props.couterStore.incrementAsync();
   };
 
   render() {
-    const { store } = this.props;
+    const { couterStore } = this.props;
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Clicked: {store.counter} times</Text>
+        <Text style={styles.text}>Clicked: {couterStore.counter} times</Text>
         <TouchableHighlight onPress={this.increment}>
           <Text style={styles.text}>+</Text>
         </TouchableHighlight>
