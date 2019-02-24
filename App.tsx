@@ -40,7 +40,7 @@ const Stack = createStackNavigator(
     Navbar : {screen : NavbarContainer}
   },
   { 
-    initialRouteName: "Setup",
+    initialRouteName: "Navbar",
     headerMode : "none"
   }
 );

@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
-import { NavigationActions } from "react-navigation";
+import { NavigationActions, SafeAreaView} from "react-navigation";
 import * as Animatable from "react-native-animatable";
 import CounterContainer from "./CounterContainer";
 import NavbarContainer from "./NavbarContainer";
+import ImageSetup from "../screen/view/Setup/Image.Setup";
+import ContentSetup from "../screen/view/Setup/Content.Setup";
+import ButtonSetup from "../screen/view/Setup/Button.Setup";
+import { moderateScale } from "react-native-size-matters";
 
 export interface Props {
   navigation: NavigationActions;
@@ -28,19 +32,18 @@ export class SetupContainer extends Component<Props, State> {
     return (
       <View style={{ flex: 1 }}>
         <Animatable.View
-          animation={!this.state.hidden ? "zoomIn" : "zoomOut"}
-          duration={1000}
-          style={[styles.container, { flex: !this.state.hidden ? 1 : 0 }]}
+          style={[styles.container]}
         >
-          <Text> textInComponent </Text>
-          <TouchableOpacity onPress={this.onPress}>
-            <Text>click me</Text>
-          </TouchableOpacity>
+         {!this.state.hidden ? <View style={[styles.container, {marginTop: moderateScale(30),}]}>
+             <ImageSetup/>
+            <ContentSetup/>
+            <ButtonSetup onPress={this.onPress}/>
+         </View> : null}
         </Animatable.View>
         <Animatable.View
           animation={this.state.hidden ? "zoomIn" : ""}
           duration={1000}
-          style={[styles.container2, { flex: this.state.hidden ? 1 : 0 }]}
+          style={[styles.container2, {flex : this.state.hidden ? 1 : 0}]}
         >
           <NavbarContainer />
         </Animatable.View>
@@ -53,11 +56,11 @@ export class SetupContainer extends Component<Props, State> {
 export default SetupContainer;
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    // marginTop: moderateScale(30),
   },
   container2: {
-    flex: 1
+      flex : 1,
   }
 });

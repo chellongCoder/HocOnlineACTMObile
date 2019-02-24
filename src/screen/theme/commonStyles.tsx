@@ -38,9 +38,9 @@ export default {
         // marginTop: moderateScale(10),
     },
     defaultText: {
-        fontSize: moderateScale(commonColor.DefaultFontSize),
+        fontSize: moderateScale(commonColor.fontSizeH2),
         color: commonColor.defaultTextColor,
-        lineHeight: moderateScale(20)
+        lineHeight: moderateScale(30)
     },
     boldText: {
         fontSize: moderateScale(commonColor.DefaultFontSize),
@@ -54,8 +54,9 @@ export default {
         lineHeight: moderateScale(20)
     },
     lightText: {
-        fontSize: moderateScale(commonColor.DefaultFontSize),
-        color: commonColor.textColorWhite
+        fontSize: verticalScale(commonColor.btnTextSizeSmall),
+        color: commonColor.whitebackground,
+        lineHeight: moderateScale(30)
     },
     dangerText: {
         fontSize: moderateScale(commonColor.DefaultFontSize),
@@ -63,7 +64,8 @@ export default {
     },
     textLarge: {
         fontSize: moderateScale(commonColor.fontSizeH2),
-        color: commonColor.defaultTextColor
+        color: commonColor.whitebackground,
+        lineHeight: moderateScale(30)
     },
     textButton: {
         fontSize: verticalScale(commonColor.DefaultFontSize),
@@ -73,7 +75,7 @@ export default {
     textNote: {
         fontSize: verticalScale(commonColor.DefaultFontSize),
         color: commonColor.textNote,
-        lineHeight: moderateScale(20)
+        lineHeight: moderateScale(30)
     },
     textTag: {
         fontSize: verticalScale(commonColor.DefaultFontSize),

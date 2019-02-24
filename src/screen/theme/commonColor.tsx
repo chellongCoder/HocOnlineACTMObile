@@ -1,4 +1,3 @@
-import color from "color";
 
 import { Platform, Dimensions, PixelRatio } from "react-native";
 import { moderateScale } from "react-native-size-matters";
@@ -38,7 +37,7 @@ export default {
     CheckboxIconSize: platform === "ios" ? 21 : 14,
     CheckboxIconMarginTop: platform === "ios" ? undefined : 1,
     CheckboxFontSize: platform === "ios" ? 23 / 0.9 : 18,
-    DefaultFontSize: 13,
+    DefaultFontSize: 17,
     checkboxBgColor: "#039BE5",
     checkboxSize: 20,
     checkboxTickColor: "#fff",
@@ -93,7 +92,7 @@ export default {
         return this.fontSizeBase * 1.5;
     },
     get btnTextSizeSmall() {
-        return this.fontSizeBase * 0.8;
+        return this.fontSizeBase * 0.7;
     },
     get borderRadiusLarge() {
         return this.fontSizeBase * 3.8;
@@ -212,11 +211,6 @@ export default {
     toolbarTextColor: "#fff",
     iosStatusbar: "light-content",
     toolbarDefaultBorder: "#2874F0",
-    get statusBarColor() {
-        return color(this.toolbarDefaultBg)
-            .darken(0.2)
-            .hex();
-    },
 
     // Icon
     iconFamily: "Ionicons",
@@ -281,11 +275,6 @@ export default {
 
     radioColor: "#7e7e7e",
 
-    get radioSelectedColor() {
-        return color(this.radioColor)
-            .darken(0.2)
-            .hex();
-    },
 
     // Spinner
     defaultSpinnerColor: "#45D56E",
@@ -297,13 +286,13 @@ export default {
     tabTextColor: "#222222",
 
     // Text
-    textColor: "#000",
+    textColor: "#554E8F",
     textColorWhite: "#FFFFFF",
     blurTextColor: "#C4C4C4",
     inverseTextColor: "#F7F7F6",
     noteFontSize: 14,
     textType: "#7B7B7B",
-    textNote: "#808080",
+    textNote: "#82A0B7",
     textDanger: "#d9534f",
     // Title
     titleFontfamily: platform === "ios" ? "System" : "Roboto_medium",
@@ -319,11 +308,6 @@ export default {
     borderWidth: 1 / PixelRatio.getPixelSizeForLayoutSize(1),
     contentPadding: 10,
 
-    get darkenHeader() {
-        return color(this.tabBgColor)
-            .darken(0.03)
-            .hex();
-    },
 
     dropdownBg: "#000",
     dropdownLinkColor: "#414142",

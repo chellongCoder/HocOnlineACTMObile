@@ -5,9 +5,10 @@ import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import CounterContainer from './CounterContainer';
 import SetupContainer from './SetupContainer';
 import DemoContainer from './DemoContainer';
+import HomeContainer from './HomeContainer';
 const Navbar = createBottomTabNavigator(
     {
-        Home: CounterContainer,
+        Home: HomeContainer,
         Settings: DemoContainer,
     },
     {
@@ -30,6 +31,7 @@ const Navbar = createBottomTabNavigator(
             activeTintColor: 'tomato',
             inactiveTintColor: 'gray',
         },
+        headerMode: 'none',
     }
 );
 const AppContainer = createAppContainer(Navbar);
