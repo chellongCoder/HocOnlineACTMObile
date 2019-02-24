@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 });
 
 export interface Props {
-  couterStore : CounterStore;
+  couterStore ?: CounterStore;
 }
 @inject("couterStore")
 @observer

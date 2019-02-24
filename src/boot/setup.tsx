@@ -6,6 +6,9 @@ import { Provider } from "mobx-react/native";
 import CounterStore from '../store/couter';
 import stores from './configStore';
 export default class Setup extends Component {
+  componentDidMount() {
+    console.disableYellowBox = true;
+  }
     render() {
       return (
       <Provider {...stores()}>
