@@ -77,6 +77,16 @@ export default {
         color: commonColor.textNote,
         lineHeight: moderateScale(30)
     },
+    timeText : {
+        fontSize: verticalScale(commonColor.btnTextSizeSmall),
+        color: commonColor.timeText,
+        lineHeight: moderateScale(30)
+    },
+    contentText : {
+        fontSize: moderateScale(commonColor.fontSizeH5),
+        color: commonColor.defaultTextColor,
+        lineHeight: moderateScale(30)
+    },
     textTag: {
         fontSize: verticalScale(commonColor.DefaultFontSize),
         backgroundColor: commonColor.textButton,

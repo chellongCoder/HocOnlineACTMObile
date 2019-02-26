@@ -178,6 +178,12 @@ export default {
     get fontSizeH3() {
         return this.fontSizeBase * 1.4;
     },
+    get fontSizeH4() {
+        return this.fontSizeBase * 1.2;
+    },
+    get fontSizeH5() {
+        return this.fontSizeBase ;
+    },
 
     // Footer
     footerHeight: 55,
@@ -286,6 +292,7 @@ export default {
     tabTextColor: "#222222",
 
     // Text
+    timeText: "#C6C6C8",
     textColor: "#554E8F",
     textColorWhite: "#FFFFFF",
     blurTextColor: "#C4C4C4",

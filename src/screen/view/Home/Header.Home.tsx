@@ -8,7 +8,7 @@ import commonStyles from "../../theme/commonStyles";
 export default function HeaderHome() {
     
     return (
-        <ImageBackground style={{width: '100%', height: '100%', flex : 4/10, justifyContent : 'flex-end'}} source={require("./../../../assets/images/Rectangle_3.png")}>
+        <ImageBackground style={{width: '100%', height: '100%', flex : 5/10, justifyContent : 'flex-end'}} source={require("./../../../assets/images/Rectangle_3.png")}>
             {/* <Image style={styles.header} /> */}
             <Image style={styles.elipse_11} source={require("./../../../assets/images/Ellipse_11.png")}/>
             <Image style={styles.elipse_12} source={require("./../../../assets/images/Ellipse_12.png")}/>
