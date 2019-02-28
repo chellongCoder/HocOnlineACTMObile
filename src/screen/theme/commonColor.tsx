@@ -325,5 +325,8 @@ export default {
     deviceHeight,
 
     // New Variable
-    inputGroupRoundedBorderRadius: 30
+    inputGroupRoundedBorderRadius: 30,
+
+    borderLeftAlarm: "#D10263",
+    borderLeftAlarmed: "#1ED102",
 };
