@@ -36,6 +36,8 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* HOcOnlineACTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HOcOnlineACTTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
+		303C79A5CCDA786CF94627C2 /* libPods-HOcOnlineACT-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 470EFE3D25E088194117F74E /* libPods-HOcOnlineACT-tvOSTests.a */; };
+		61C099F2C6669377ED4CE3BE /* libPods-HOcOnlineACT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B539183E714A4EFD12344 /* libPods-HOcOnlineACT.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		A80E13EF2221A48300679DC7 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A80E13EE2221A3A000679DC7 /* libRNGestureHandler.a */; };
 		A810558E22229C9600E07F10 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A810557F22229C9600E07F10 /* Octicons.ttf */; };
@@ -54,7 +56,12 @@
 		A810559B22229C9600E07F10 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A810558C22229C9600E07F10 /* SimpleLineIcons.ttf */; };
 		A810559C22229C9600E07F10 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A810558D22229C9600E07F10 /* MaterialIcons.ttf */; };
 		A81055A622229D0E00E07F10 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A81055A322229D0500E07F10 /* libRNVectorIcons.a */; };
+		A81162AF22283DAD00A5FEC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A81162AE22283DAD00A5FEC9 /* GoogleService-Info.plist */; };
+		A81162B9222840DA00A5FEC9 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A81162B6222840CF00A5FEC9 /* libRCTPushNotification.a */; };
+		A81162BC2228412600A5FEC9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A81162BB2228412600A5FEC9 /* GameKit.framework */; };
+		A81162C622284CE800A5FEC9 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A81162C522284CDB00A5FEC9 /* libRNFirebase.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		D4C17435A41E3011357A58BF /* libPods-HOcOnlineACTTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A540DBCDB93B0C711FF4A2 /* libPods-HOcOnlineACTTests.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
@@ -347,6 +354,27 @@
 			remoteGlobalIDString = A39873CE1EA65EE60051E01A;
 			remoteInfo = "RNVectorIcons-tvOS";
 		};
+		A81162B5222840CF00A5FEC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A81162B0222840CD00A5FEC9 /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTPushNotification;
+		};
+		A81162B7222840CF00A5FEC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A81162B0222840CD00A5FEC9 /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D05745F1DE6004600184BB4;
+			remoteInfo = "RCTPushNotification-tvOS";
+		};
+		A81162C422284CDB00A5FEC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A81162C022284CDB00A5FEC9 /* RNFirebase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNFirebase;
+		};
 		ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
@@ -376,9 +404,13 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HOcOnlineACT/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = HOcOnlineACT/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		29B455310B98B508CB9B62EA /* Pods-HOcOnlineACT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOcOnlineACT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HOcOnlineACT/Pods-HOcOnlineACT.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* HOcOnlineACT-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HOcOnlineACT-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* HOcOnlineACT-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HOcOnlineACT-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		470EFE3D25E088194117F74E /* libPods-HOcOnlineACT-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HOcOnlineACT-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		525B539183E714A4EFD12344 /* libPods-HOcOnlineACT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HOcOnlineACT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		585C1F88B25246D5E3085E86 /* Pods-HOcOnlineACT-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOcOnlineACT-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HOcOnlineACT-tvOSTests/Pods-HOcOnlineACT-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		66DAC8990B534C1E8784E238 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -399,10 +431,20 @@
 		A810558C22229C9600E07F10 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		A810558D22229C9600E07F10 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		A810559D22229D0500E07F10 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
+		A81162AE22283DAD00A5FEC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A81162B0222840CD00A5FEC9 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
+		A81162BA2228411F00A5FEC9 /* HOcOnlineACT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = HOcOnlineACT.entitlements; path = HOcOnlineACT/HOcOnlineACT.entitlements; sourceTree = "<group>"; };
+		A81162BB2228412600A5FEC9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		A81162C022284CDB00A5FEC9 /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNFirebase.xcodeproj; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		ADFB8EFA733EA7FDF09C9D84 /* Pods-HOcOnlineACTTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOcOnlineACTTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HOcOnlineACTTests/Pods-HOcOnlineACTTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE5F179CC8994B1CBC2B5376 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
+		D0326CC551147E32C5915A4C /* Pods-HOcOnlineACT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOcOnlineACT.release.xcconfig"; path = "Pods/Target Support Files/Pods-HOcOnlineACT/Pods-HOcOnlineACT.release.xcconfig"; sourceTree = "<group>"; };
+		E54750C7B8E82EAC80A9652F /* Pods-HOcOnlineACTTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOcOnlineACTTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HOcOnlineACTTests/Pods-HOcOnlineACTTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F36296E736248D5071C92CE2 /* Pods-HOcOnlineACT-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOcOnlineACT-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HOcOnlineACT-tvOSTests/Pods-HOcOnlineACT-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7A540DBCDB93B0C711FF4A2 /* libPods-HOcOnlineACTTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HOcOnlineACTTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				D4C17435A41E3011357A58BF /* libPods-HOcOnlineACTTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,15 +467,19 @@
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				A81055A622229D0E00E07F10 /* libRNVectorIcons.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
+				A81162B9222840DA00A5FEC9 /* libRCTPushNotification.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
+				A81162C622284CE800A5FEC9 /* libRNFirebase.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
+				A80E13EF2221A48300679DC7 /* libRNGestureHandler.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
+				A81162BC2228412600A5FEC9 /* GameKit.framework in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				A80E13EF2221A48300679DC7 /* libRNGestureHandler.a in Frameworks */,
+				61C099F2C6669377ED4CE3BE /* libPods-HOcOnlineACT.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,12 +504,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */,
+				303C79A5CCDA786CF94627C2 /* libPods-HOcOnlineACT-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00641695E6E78A90DB264F21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29B455310B98B508CB9B62EA /* Pods-HOcOnlineACT.debug.xcconfig */,
+				D0326CC551147E32C5915A4C /* Pods-HOcOnlineACT.release.xcconfig */,
+				F36296E736248D5071C92CE2 /* Pods-HOcOnlineACT-tvOSTests.debug.xcconfig */,
+				585C1F88B25246D5E3085E86 /* Pods-HOcOnlineACT-tvOSTests.release.xcconfig */,
+				ADFB8EFA733EA7FDF09C9D84 /* Pods-HOcOnlineACTTests.debug.xcconfig */,
+				E54750C7B8E82EAC80A9652F /* Pods-HOcOnlineACTTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		00C302A81ABCB8CE00DB3ED1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,7 +606,9 @@
 		13B07FAE1A68108700A75B9A /* HOcOnlineACT */ = {
 			isa = PBXGroup;
 			children = (
+				A81162BA2228411F00A5FEC9 /* HOcOnlineACT.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				A81162AE22283DAD00A5FEC9 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -582,9 +645,13 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A81162BB2228412600A5FEC9 /* GameKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				525B539183E714A4EFD12344 /* libPods-HOcOnlineACT.a */,
+				470EFE3D25E088194117F74E /* libPods-HOcOnlineACT-tvOSTests.a */,
+				F7A540DBCDB93B0C711FF4A2 /* libPods-HOcOnlineACTTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -610,6 +677,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A81162C022284CDB00A5FEC9 /* RNFirebase.xcodeproj */,
+				A81162B0222840CD00A5FEC9 /* RCTPushNotification.xcodeproj */,
 				A810559D22229D0500E07F10 /* RNVectorIcons.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -647,6 +716,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				A80E13BC2221A39A00679DC7 /* Recovered References */,
+				00641695E6E78A90DB264F21 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -712,6 +782,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A81162B1222840CE00A5FEC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A81162B6222840CF00A5FEC9 /* libRCTPushNotification.a */,
+				A81162B8222840CF00A5FEC9 /* libRCTPushNotification-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A81162C122284CDB00A5FEC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A81162C522284CDB00A5FEC9 /* libRNFirebase.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		ADBDB9201DFEBF0600ED6528 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -728,6 +815,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "HOcOnlineACTTests" */;
 			buildPhases = (
+				14DEAFC802ACBD10BA5CAF7A /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -746,10 +834,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "HOcOnlineACT" */;
 			buildPhases = (
+				6194F409CBAE302D6C1A35DA /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				7D842F895074031A9BD015EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -782,6 +872,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "HOcOnlineACT-tvOSTests" */;
 			buildPhases = (
+				06A98FFB03F406598C0C3229 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -808,6 +899,17 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = SAAJG3ANPM;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -861,6 +963,10 @@
 					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
 				},
 				{
+					ProductGroup = A81162B1222840CE00A5FEC9 /* Products */;
+					ProjectRef = A81162B0222840CD00A5FEC9 /* RCTPushNotification.xcodeproj */;
+				},
+				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
 					ProjectRef = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
 				},
@@ -879,6 +985,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = A81162C122284CDB00A5FEC9 /* Products */;
+					ProjectRef = A81162C022284CDB00A5FEC9 /* RNFirebase.xcodeproj */;
 				},
 				{
 					ProductGroup = A80E13EA2221A3A000679DC7 /* Products */;
@@ -1173,6 +1283,27 @@
 			remoteRef = A81055A422229D0500E07F10 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		A81162B6222840CF00A5FEC9 /* libRCTPushNotification.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTPushNotification.a;
+			remoteRef = A81162B5222840CF00A5FEC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A81162B8222840CF00A5FEC9 /* libRCTPushNotification-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTPushNotification-tvOS.a";
+			remoteRef = A81162B7222840CF00A5FEC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A81162C522284CDB00A5FEC9 /* libRNFirebase.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNFirebase.a;
+			remoteRef = A81162C422284CDB00A5FEC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1205,6 +1336,7 @@
 				A810559722229C9600E07F10 /* FontAwesome5_Regular.ttf in Resources */,
 				A810559122229C9600E07F10 /* FontAwesome5_Brands.ttf in Resources */,
 				A810559022229C9600E07F10 /* Entypo.ttf in Resources */,
+				A81162AF22283DAD00A5FEC9 /* GoogleService-Info.plist in Resources */,
 				A810559C22229C9600E07F10 /* MaterialIcons.ttf in Resources */,
 				A810559322229C9600E07F10 /* AntDesign.ttf in Resources */,
 				A810559622229C9600E07F10 /* FontAwesome5_Solid.ttf in Resources */,
@@ -1246,6 +1378,50 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		06A98FFB03F406598C0C3229 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HOcOnlineACT-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14DEAFC802ACBD10BA5CAF7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HOcOnlineACTTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1259,6 +1435,50 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		6194F409CBAE302D6C1A35DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HOcOnlineACT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D842F895074031A9BD015EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HOcOnlineACT/Pods-HOcOnlineACT-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HOcOnlineACT/Pods-HOcOnlineACT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1327,6 +1547,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADFB8EFA733EA7FDF09C9D84 /* Pods-HOcOnlineACTTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1356,6 +1577,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E54750C7B8E82EAC80A9652F /* Pods-HOcOnlineACTTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -1382,10 +1604,17 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29B455310B98B508CB9B62EA /* Pods-HOcOnlineACT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HOcOnlineACT/HOcOnlineACT.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = SAAJG3ANPM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
@@ -1396,8 +1625,9 @@
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
+					"$(OTHER_LDFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.act.HocOnlineACT;
 				PRODUCT_NAME = HOcOnlineACT;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1405,9 +1635,16 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0326CC551147E32C5915A4C /* Pods-HOcOnlineACT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HOcOnlineACT/HOcOnlineACT.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SAAJG3ANPM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
@@ -1418,8 +1655,9 @@
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
+					"$(OTHER_LDFLAGS)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.act.HocOnlineACT;
 				PRODUCT_NAME = HOcOnlineACT;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1495,6 +1733,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F36296E736248D5071C92CE2 /* Pods-HOcOnlineACT-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1528,6 +1767,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 585C1F88B25246D5E3085E86 /* Pods-HOcOnlineACT-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;

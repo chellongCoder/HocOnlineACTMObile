@@ -25,7 +25,6 @@ export default function HeaderHome() {
                     <Image source={require("./../../../assets/images/close.png")}/>
                 </TouchableOpacity>
             </View>
-
         </ImageBackground>    
     )
 }
