@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import { Text, View, FlatList, TouchableHighlight, SectionList, StyleSheet } from 'react-native'
+import { Text, View, FlatList, TouchableHighlight, SectionList, Animated, StyleSheet } from 'react-native'
 import ItemTodo from '../Components/ItemTodo';
 import commonStyles from '../../theme/commonStyles';
 import { moderateScale } from 'react-native-size-matters';
 import data from './data';
 
 export interface Props {
-
 }
 export class TodoList extends Component<Props> {
   constructor(props : Props) {

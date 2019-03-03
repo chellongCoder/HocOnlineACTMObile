@@ -28,6 +28,7 @@ import {
 import CounterContainer from "./src/container/CounterContainer";
 import SetupContainer from "./src/container/SetupContainer";
 import NavbarContainer from "./src/container/NavbarContainer";
+import TestComponent from "./Test";
 
 export interface Props {}
 /**
@@ -37,7 +38,8 @@ const Stack = createStackNavigator(
   {
     Home: { screen: CounterContainer },
     Setup: { screen: SetupContainer },
-    Navbar : {screen : NavbarContainer}
+    Navbar : {screen : NavbarContainer},
+    Test : {screen : TestComponent}
   },
   { 
     initialRouteName: "Navbar",

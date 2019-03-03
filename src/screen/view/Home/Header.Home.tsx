@@ -1,31 +1,43 @@
-import { TouchableOpacity, View, Text,Image,ImageBackground, StyleSheet } from "react-native";
+import { TouchableOpacity, View, Text, Image, ImageBackground, Animated, StyleSheet } from "react-native";
 import React, { Component,  } from 'react'
 import * as Animatable from "react-native-animatable";
 import { moderateScale } from "react-native-size-matters";
 import commonColor from "../../theme/commonColor";
 import commonStyles from "../../theme/commonStyles";
 import data from './data';
-export default function HeaderHome() {
+const HEADER_EXPANDED_HEIGHT = 300;
+const HEADER_COLLAPSED_HEIGHT = 180;
+export default function HeaderHome({scrollY} : any) {
+    const headerTitleOpacity = scrollY.interpolate({
+        inputRange: [0, HEADER_EXPANDED_HEIGHT - HEADER_COLLAPSED_HEIGHT],
+        outputRange: [0, 1],
+        extrapolate: 'clamp'
+    });
+    const paddingVertical = scrollY.interpolate({
+        inputRange: [0, HEADER_EXPANDED_HEIGHT - HEADER_COLLAPSED_HEIGHT],
+        outputRange: [20, 0],
+        extrapolate: 'clamp'
+    });
     let time = getTimeAlarm(data[0].data);
     return (
-        <ImageBackground style={{width: '100%', height: '100%', flex : 5/10, justifyContent : 'flex-end'}} source={require("./../../../assets/images/Rectangle_3.png")}>
+        <ImageBackground style={{ width: '100%', height: '100%', justifyContent : 'flex-end'}} source={require("./../../../assets/images/Rectangle_3.png")}>
             {/* <Image style={styles.header} /> */}
             <Image style={styles.elipse_11} source={require("./../../../assets/images/Ellipse_11.png")}/>
             <Image style={styles.elipse_12} source={require("./../../../assets/images/Ellipse_12.png")}/>
-            <View style={styles.reminder}>
-                <View style={styles.left}>
-                    <Text style={commonStyles.textLarge}>Today Reminder</Text>
+            <Animated.View style={[styles.reminder, {paddingVertical: paddingVertical,}]}>
+                <Animated.View style={styles.left}>
+                    <Animated.Text style={[commonStyles.textLarge]}>Today Reminder</Animated.Text>
                     <Text style={commonStyles.lightText}>{data[0].title}</Text>
                     <Text style={commonStyles.lightText}>{time}</Text>
-                </View>
+                </Animated.View>
                 <View style={styles.right}>
-                    <Image source={require("./../../../assets/images/bell.png")}/>
+                    <Animated.Image source={require("./../../../assets/images/bell.png")}/>
                 </View>
-                <TouchableOpacity>
+                <TouchableOpacity style={styles.close}>
                     <Image source={require("./../../../assets/images/close.png")}/>
                 </TouchableOpacity>
-            </View>
-        </ImageBackground>    
+            </Animated.View>
+        </ImageBackground>  
     )
 }
 function getTimeAlarm(data : Array<any>) {
@@ -95,5 +107,8 @@ const styles = StyleSheet.create({
     right : {
         flex : 3/10,
         alignItems: 'flex-end',
+    },
+    close : {
+        marginTop : moderateScale(10)
     }
 })
