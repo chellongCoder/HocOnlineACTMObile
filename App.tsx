@@ -38,12 +38,12 @@ const Stack = createStackNavigator(
   {
     Home: { screen: CounterContainer },
     Setup: { screen: SetupContainer },
-    Navbar : {screen : NavbarContainer},
-    Test : {screen : TestComponent}
+    Navbar: { screen: NavbarContainer },
+    Test: { screen: TestComponent }
   },
-  { 
-    initialRouteName: "Navbar",
-    headerMode : "none"
+  {
+    initialRouteName: "Setup",
+    headerMode: "none"
   }
 );
 /**

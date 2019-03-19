@@ -15,6 +15,14 @@ export default class Setup extends Component {
     console.disableYellowBox = true;
     this.configNotification();
   }
+  async getUserRoleByIdUser(id : number) {
+    let request = `http://localhost:8080/api/ext/get-role?id=5`;
+    console.log('request', request);
+    const res = await fetch(request);
+    const json = await res.json();
+    if (json.length !== 0) return json[0];
+    throw new Error(json.message);
+  }
   configNotification () {
     PushNotification.configure({
 
@@ -26,7 +34,7 @@ export default class Setup extends Component {
       // (required) Called when a remote or local notification is opened or received
       onNotification: function (notification : any) {
         console.log('NOTIFICATION:', notification);
-
+        this.getUserRoleByIdUser(5);
         // process the notification
 
         // required on iOS only (see fetchCompletionHandler docs: https://facebook.github.io/react-native/docs/pushnotificationios.html)

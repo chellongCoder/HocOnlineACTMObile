@@ -4,41 +4,50 @@ import HeaderHome from '../screen/view/Home/Header.Home';
 import TodoList from '../screen/view/Home/TodoList.Home';
 import PushNotification from 'react-native-push-notification';
 import commonColor from '../screen/theme/commonColor';
+import { inject, observer } from 'mobx-react/native';
+import NotificationStore from '../store/NotificationStore';
+import { toJS } from 'mobx';
 const HEADER_EXPANDED_HEIGHT = 300;
 const HEADER_COLLAPSED_HEIGHT = 150;
 export interface Props {
-
+  notificationStore : NotificationStore;
 }
 export interface State {
   scrollY : Animated.Value
 }
+@inject("notificationStore")
+@observer
 export class HomeContainer extends Component<Props, State> {
   constructor(props : Props) {
     super(props);
     this.state = {
       scrollY : new Animated.Value(0)
     }
+    this.loadTodos = this.loadTodos.bind(this);
   }
   componentDidMount() {
     console.log("schedule");
     PushNotification.localNotificationSchedule({
       //... You can use all the options from localNotifications
       message: "My Notification Message", // (required)
-      // date: new Date(Date.now() + (5 * 1000)), // in 60 secs
-      date: new Date("03/04/2019 00:05:00"), // in 30 secs
+      date: new Date(Date.now() + (5 * 1000)), // in 5 secs
+      // date: new Date("03/04/2019 00:05:00"), // in 30 secs
       playSound: true, // (optional) default: true
       soundName: 'default', // (optional) Sound to play when the notification is shown. Value of 'default' plays the default sound. It can be set to a custom sound such as 'android.resource://com.xyz/raw/my_sound'. It will look for the 'my_sound' audio file in 'res/raw' directory and play it. default: 'default' (default sound is played)
 
-    });
-    PushNotification.localNotificationSchedule({
-      //... You can use all the options from localNotifications
-      message: "My Notification Message", // (required)
-      // date: new Date(Date.now() + (5 * 1000)), // in 60 secs
-      date: new Date("03/04/2019 00:06:00"), // in 30 secs
-      playSound: true, // (optional) default: true
-      soundName: 'default', // (optional) Sound to play when the notification is shown. Value of 'default' plays the default sound. It can be set to a custom sound such as 'android.resource://com.xyz/raw/my_sound'. It will look for the 'my_sound' audio file in 'res/raw' directory and play it. default: 'default' (default sound is played)
+    // });
+    // PushNotification.localNotificationSchedule({
+    //   //... You can use all the options from localNotifications
+    //   message: "My Notification Message", // (required)
+    //   // date: new Date(Date.now() + (5 * 1000)), // in 60 secs
+    //   date: new Date("03/04/2019 00:06:00"), // in 30 secs
+    //   playSound: true, // (optional) default: true
+    //   soundName: 'default', // (optional) Sound to play when the notification is shown. Value of 'default' plays the default sound. It can be set to a custom sound such as 'android.resource://com.xyz/raw/my_sound'. It will look for the 'my_sound' audio file in 'res/raw' directory and play it. default: 'default' (default sound is played)
 
     });
+  }
+  loadTodos(todos : Array<any>) {
+    this.props.notificationStore.changeNotifications(todos);
   }
   render() {
     const headerHeight = this.state.scrollY.interpolate({
@@ -69,7 +78,10 @@ export class HomeContainer extends Component<Props, State> {
             }])
           }
           scrollEventThrottle={16}>
-          <TodoList />
+          <TodoList 
+            notifications={toJS(this.props.notificationStore.notifications)}
+            loadTodos={this.loadTodos}
+          />
         </ScrollView>
       </View>
     )

@@ -28,7 +28,6 @@ export class SetupContainer extends Component<Props, State> {
     // this.props.navigation.navigate("Home");
   }
   render() {
-    //   if(!this.state.hidden) {
     return (
       <View style={{ flex: 1 }}>
         <Animatable.View
@@ -49,7 +48,6 @@ export class SetupContainer extends Component<Props, State> {
         </Animatable.View>
       </View>
     );
-    //   }
   }
 }
 

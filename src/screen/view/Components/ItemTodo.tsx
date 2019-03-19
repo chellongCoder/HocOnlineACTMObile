@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { moderateScale } from "react-native-size-matters";
 import commonStyles from "../../theme/commonStyles";
 import commonColor from "../../theme/commonColor";
+import util from "../../../commons/util";
 export interface Props {
   item: any;
 }
@@ -35,7 +36,7 @@ export class ItemTodo extends Component<Props, State> {
             />
           </View>
           <View style={styles.time}>
-            <Text style={commonStyles.timeText}>{this.props.item.time}</Text>
+            <Text style={commonStyles.timeText}>{util.convertTime(this.props.item.time)}</Text>
           </View>
           <View style={styles.content}>
             <Text style={commonStyles.contentText}>
