@@ -18,10 +18,27 @@ export default function HeaderHome({scrollY} : any) {
         outputRange: [20, 0],
         extrapolate: 'clamp'
     });
+
+    const imageSize = scrollY.interpolate({
+      inputRange: [0, HEADER_EXPANDED_HEIGHT - HEADER_COLLAPSED_HEIGHT],
+      outputRange: [50, 20],
+      extrapolate: "clamp"
+    });
+    const transform = [{ imageSize }];
+
     let time = getTimeAlarm(data[0].data);
     return (
         <ImageBackground style={{ width: '100%', height: '100%', justifyContent : 'flex-end'}} source={require("./../../../assets/images/Rectangle_3.png")}>
             {/* <Image style={styles.header} /> */}
+            <View style={styles.userContainer}>
+                <View style={styles.userInfo}>
+                    <Text style={[commonStyles.textLarge]}>Hello Brenda!</Text>
+                    <Text style={commonStyles.lightText}>Today you have 9 tasks</Text>
+                </View>
+                <View style={styles.userImage}>
+                    <Image source={require("./../../../assets/images/avatar.png")}/>
+                </View>
+            </View>
             <Image style={styles.elipse_11} source={require("./../../../assets/images/Ellipse_11.png")}/>
             <Image style={styles.elipse_12} source={require("./../../../assets/images/Ellipse_12.png")}/>
             <Animated.View style={[styles.reminder, {paddingVertical: paddingVertical,}]}>
@@ -31,7 +48,21 @@ export default function HeaderHome({scrollY} : any) {
                     <Text style={commonStyles.lightText}>{time}</Text>
                 </Animated.View>
                 <View style={styles.right}>
-                    <Animated.Image source={require("./../../../assets/images/bell.png")}/>
+                    <Animated.Image style={{
+                        transform: [
+                            {
+                                scaleX: scrollY.interpolate({
+                                    inputRange: [0, HEADER_EXPANDED_HEIGHT - HEADER_COLLAPSED_HEIGHT],
+                                    outputRange: [1, 0.8]
+                                })
+                            },
+                            {
+                                scaleY: scrollY.interpolate({
+                                    inputRange: [0, HEADER_EXPANDED_HEIGHT - HEADER_COLLAPSED_HEIGHT],
+                                    outputRange: [1, 0.8]
+                                })
+                            }
+                        ],width: moderateScale(50), height: moderateScale(50)}} source={require("./../../../assets/images/bell.png")}/>
                 </View>
                 <TouchableOpacity style={styles.close}>
                     <Image source={require("./../../../assets/images/close.png")}/>
@@ -77,38 +108,50 @@ const convertTime12to24 = (time12h : string) => {
     }
 }
 const styles = StyleSheet.create({
-    header : {
-        position : 'absolute',
-        top : 0
-    },
-    elipse_11 : {
-        position : 'absolute',
-        top : moderateScale(-100),
-        left : moderateScale(-50)
-    },
-    elipse_12 : {
-        position: 'absolute',
-        right : moderateScale(-20),
-        top : moderateScale(-20)
-    },
-    reminder : {
-        flexDirection: 'row',
-        backgroundColor: "rgba(255, 255, 255, 0.23)",
-        marginBottom: moderateScale(20),
-        marginHorizontal: moderateScale(20),
-        paddingVertical: moderateScale(20),
-        paddingHorizontal: moderateScale(20),
-        borderRadius: moderateScale(10),
-    },
-    left : {
-        flex : 7/10,
-        alignItems: 'flex-start',
-    },
-    right : {
-        flex : 3/10,
-        alignItems: 'flex-end',
-    },
-    close : {
-        marginTop : moderateScale(10)
-    }
-})
+  header: {
+    position: "absolute",
+    top: 0
+  },
+  elipse_11: {
+    position: "absolute",
+    top: moderateScale(-100),
+    left: moderateScale(-50)
+  },
+  elipse_12: {
+    position: "absolute",
+    right: moderateScale(-20),
+    top: moderateScale(-20)
+  },
+  reminder: {
+    flexDirection: "row",
+    backgroundColor: "rgba(255, 255, 255, 0.23)",
+    marginBottom: moderateScale(20),
+    marginHorizontal: moderateScale(20),
+    paddingVertical: moderateScale(20),
+    paddingHorizontal: moderateScale(20),
+    borderRadius: moderateScale(10)
+  },
+  left: {
+    flex: 7 / 10,
+    alignItems: "flex-start"
+  },
+  right: {
+    flex: 3 / 10,
+    alignItems: "flex-end"
+  },
+  close: {
+    marginTop: moderateScale(10)
+  },
+  userContainer : {
+      flexDirection: 'row',
+      marginHorizontal: moderateScale(20),
+      marginBottom: moderateScale(20),
+  },
+  userInfo : {
+      flex : 1,
+  },
+  userImage : {
+      flex : 1,
+      alignItems: 'flex-end',
+  }
+});

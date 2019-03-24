@@ -40,7 +40,7 @@ export class TodoList extends Component<Props> {
     }
   }
   async componentDidMount() {
-    let request = `http://localhost:8080/api/notifycation?page=1&limit=10&sort=desc`;
+    let request = `http://localhost:8080/api/ext/get-notify?day=24-03-2019`;
     let todos = [];
     console.log("request", request);
     let res = await fetch(request);
